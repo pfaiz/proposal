@@ -1,154 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ace Master Proposal</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(160deg, #0c0c0c, #1a1a1a);
+        color: #ecf0f1;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-        header {
-            background-color: #27ae60;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+    header {
+        background: #111111;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+        color: #d4af37; /* Gold */
+        text-shadow: 0 0 8px #d4af37;
+    }
 
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
+    .table {
+        width: 90%;
+        height: 500px;
+        border-radius: 20px;
+        border: 15px solid #2c3e50;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+        position: relative;
+        margin-top: 20px;
+        background: #1e1e1e; /* Dark gray */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        section {
-            padding: 20px;
-            border-bottom: 1px solid #ddd;
-        }
+    .dealer-area, .player-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-        section:last-child {
-            border-bottom: none;
-        }
+    .hand-value {
+        color: #d4af37; /* Gold */
+        font-size: 20px;
+        margin: 5px 0;
+        text-shadow: 0 0 8px #d4af37;
+    }
 
-        section h2 {
-            color: #27ae60;
-            margin-top: 0;
-        }
+    .card {
+        display: inline-block;
+        width: 60px;
+        height: 90px;
+        border-radius: 8px;
+        border: 2px solid #d4af37; /* Gold */
+        margin: 5px;
+        background: #333333; /* Darker gray */
+        color: #ecf0f1;
+        text-align: center;
+        line-height: 90px;
+        font-size: 18px;
+    }
 
-        section ul {
-            list-style: none;
-            padding: 0;
-        }
+    .chips-area {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
 
-        section ul li {
-            margin: 5px 0;
-        }
+    .chip {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 10px;
+        background-color: #d4af37; /* Gold */
+        color: black;
+        line-height: 50px;
+        font-size: 16px;
+        text-align: center;
+        border: 2px solid #000;
+        cursor: pointer;
+        box-shadow: 0 0 10px #d4af37;
+    }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #f4f4f4;
-            font-size: 0.9em;
-        }
+    .chip:hover {
+        background-color: #b8860b; /* Darker gold */
+    }
 
-        footer a {
-            color: #27ae60;
-            text-decoration: none;
-        }
+    .controls {
+        text-align: center;
+        margin-top: 10px;
+    }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Ace Master Proposal</h1>
-    </header>
+    .control-btn {
+        background: #444444;
+        color: white;
+        border: 2px solid #d4af37;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        margin: 5px;
+        cursor: pointer;
+        box-shadow: 0 0 8px #d4af37;
+    }
 
-    <main>
-        <section>
-            <h2>Application Overview</h2>
-            <p>Ace Master is a fun and simple blackjack game you can play in your browser. You start with fake money to bet, and the goal is to beat the dealer without going over 21. You can hit for more cards or stand to keep your total. The game is easy to play, with cool features like animations, sound effects, and balance refill options.</p>
-        </section>
+    .control-btn:hover {
+        background: #555555;
+    }
 
-        <section>
-            <h2>Technology Overview</h2>
-            <ul>
-                <li><strong>Languages:</strong> HTML, CSS, JavaScript</li>
-                <li><strong>Libraries:</strong> None (vanilla JavaScript)</li>
-                <li><strong>Platform:</strong> Works in any modern browser</li>
-                <li><strong>Hosting:</strong> Can be hosted on GitHub Pages or similar platforms</li>
-            </ul>
-        </section>
+    .refill-btn, .color-btn {
+        background: #111111;
+        color: white;
+        border: 2px solid #d4af37;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+        box-shadow: 0 0 8px #d4af37;
+    }
 
-        <section>
-            <h2>Proposal Last Updated</h2>
-            <p>December 5, 2024</p>
-        </section>
+    .refill-btn:hover, .color-btn:hover {
+        background: #333333;
+    }
 
-        <section>
-            <h2>Feature List</h2>
-            <ul>
-                <li>Welcome screen with a "Play" button</li>
-                <li>Interactive blackjack table showing player and dealer cards</li>
-                <li>Betting system with virtual chips</li>
-                <li>Buttons for "Hit" and "Stand"</li>
-                <li>Balance tracker and refill option</li>
-                <li>Game messages like "You Win!" or "Bust!"</li>
-                <li>Sound effects for card dealing</li>
-            </ul>
-        </section>
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.9);
+        color: #d4af37; /* Gold */
+        padding: 20px 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+        text-align: center;
+        font-size: 24px;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease-in-out;
+    }
 
-        <section>
-            <h2>Future Feature List</h2>
-            <ul>
-                <li>Multiplayer mode</li>
-                <li>Leaderboard to track high scores</li>
-                <li>New game modes like "Double Down" or "Split"</li>
-                <li>Save progress and balance between sessions</li>
-                <li>Custom themes for table and chips</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Basic Technical Features</h2>
-            <ul>
-                <li>Automatic updates for cards and scores</li>
-                <li>Handles blackjack rules, including Aces as 1 or 11</li>
-                <li>Betting system with balance management</li>
-                <li>Real-time feedback for game outcomes</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Advanced Technical Features</h2>
-            <ul>
-                <li>Animations and sound effects for dealing cards</li>
-                <li>Popup messages for game results</li>
-                <li>Balance tracking with betting logic</li>
-                <li>Customizable table colors</li>
-                <li>Dealer AI that follows blackjack rules</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>Created by the Ace Master Team. View the project on <a href="#">GitHub</a>.</p>
-    </footer>
-</body>
-</html>
+    .popup.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+</style>
